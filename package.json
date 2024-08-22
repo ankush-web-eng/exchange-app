@@ -1,24 +1,23 @@
 {
-  "name": "exchange-server",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "my-turborepo",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.4.1",
-    "@types/redis": "^4.0.11",
-    "@types/uuid": "^10.0.0",
-    "express": "^4.19.2",
-    "redis": "^4.7.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "uuid": "^10.0.0",
-    "zod": "^3.23.8"
-  }
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.14",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@6.14.18",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
